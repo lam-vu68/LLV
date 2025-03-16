@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f2f5; /* Nền xám nhạt */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px; /* Thêm padding để không sát mép trên mobile */
+      }
+      .cv-container {
+        position: relative;
+        width: 600px;
+        max-width: 100%; /* Đảm bảo không vượt quá kích thước màn hình */
+        perspective: 1000px; /* Tạo hiệu ứng 3D nhẹ */
+      }
+      .card {
+        background: #ffffff;
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 1;
+        transition: transform 0.3s ease;
+      }
+      .card.about {
+        background: #e6f0fa; /* Nền xanh nhạt cho phần About */
+        transform: translateX(-20px); /* Dịch trái nhẹ */
+      }
+      .card.info {
+        background: #fff5f5; /* Nền hồng nhạt cho phần Info */
+        transform: translateX(20px) translateY(-50px); /* Dịch phải và chồng lên phần About */
+        z-index: 2;
+      }
+      h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+        background: linear-gradient(
+          to right,
+          #87ceeb,
+          #dda0dd
+        ); /* Gradient xanh dương nhạt -> tím nhạt */
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin: 5px 0;
+        color: #333;
+      }
+      .info-item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+      .info-item label {
+        font-weight: bold;
+        color: #555;
+      }
+      .info-item span {
+        color: #333;
+        text-align: right; /* Căn phải trên mobile để dễ đọc */
+      }
+      .highlight {
+        color: #2ecc71; /* Màu xanh lá nổi bật cho email */
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        /* Máy tính bảng và điện thoại */
+        .cv-container {
+          width: 100%; /* Chiếm toàn bộ chiều rộng */
+          padding: 0 10px;
+        }
+        .card {
+          padding: 15px; /* Giảm padding */
+          margin-bottom: 15px;
+        }
+        .card.about {
+          transform: none; /* Bỏ hiệu ứng dịch trái */
+        }
+        .card.info {
+          transform: none; /* Bỏ hiệu ứng dịch phải và chồng lấn */
+          translatey: 0; /* Đặt lại vị trí */
+        }
+        h2 {
+          font-size: 20px; /* Giảm kích thước tiêu đề */
+        }
+        p {
+          font-size: 14px; /* Giảm kích thước chữ */
+        }
+        .info-item {
+          font-size: 14px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        /* Điện thoại nhỏ */
+        .cv-container {
+          padding: 0 5px;
+        }
+        .card {
+          padding: 10px; /* Giảm padding thêm */
+          margin-bottom: 10px;
+        }
+        h2 {
+          font-size: 18px; /* Giảm kích thước tiêu đề thêm */
+        }
+        p {
+          font-size: 12px; /* Giảm kích thước chữ thêm */
+        }
+        .info-item {
+          font-size: 12px;
+          flex-direction: column; /* Chuyển thành cột để dễ đọc */
+          gap: 5px; /* Khoảng cách giữa label và span */
+        }
+        .info-item label {
+          font-size: 12px;
+        }
+        .info-item span {
+          text-align: left; /* Căn trái trên mobile nhỏ */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cv-container">
+      <div class="card about">
+        <h2>About</h2>
+        <p>
+          Hello! I am Anthony Barnett, Web Developer, Graphic Designer and
+          Photographer.
+        </p>
+        <p>
+          Creative CV is a HTML resume template for professionals. Built with
+          Bootstrap 4, Now UI Kit and FontAwesome, this modern and responsive
+          template is perfect to showcase your portfolio, skills and experience.
+        </p>
+      </div>
+      <div class="card info">
+        <h2>Basic Information</h2>
+        <div class="info-item">
+          <label>AGE:</label>
+          <span>24</span>
+        </div>
+        <div class="info-item">
+          <label>EMAIL:</label>
+          <span class="highlight">anthony@company.com</span>
+        </div>
+        <div class="info-item">
+          <label>PHONE:</label>
+          <span>+1718-111-0011</span>
+        </div>
+        <div class="info-item">
+          <label>ADDRESS:</label>
+          <span>140, City Center, New York, U.S.A</span>
+        </div>
+        <div class="info-item">
+          <label>LANGUAGE:</label>
+          <span>English, German, French</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

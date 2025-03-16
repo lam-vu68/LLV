@@ -1,0 +1,92 @@
+.container-full {
+  height: 80vh;
+  background-image: url(./img/colin-watts-Vp6FWs5OGBQ-unsplash.jpg);
+  background-size: cover;
+  background-position: end;
+}
+.container {
+  position: relative;
+}
+/* ====================================header====================================== */
+.bg-color {
+  background-color: #efefef55;
+}
+.nav-item {
+  transition-duration: 0.8s;
+  border-radius: 10px;
+  margin: 0 5px;
+}
+.nav-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.221);
+}
+.dropdown-menu {
+  transition: 1s;
+  opacity: 0;
+  display: block;
+}
+
+/* Khi dropdown mở */
+.dropdown-menu.show {
+  opacity: 1;
+}
+
+.dropdown {
+  margin-right: auto;
+}
+
+.nd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px;
+}
+.thumb {
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #8f8f8f3a;
+}
+
+.heading {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 5rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #ff1500a8, #00aeff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.desc {
+  font-size: 3rem;
+  font-weight: 500;
+  background: linear-gradient(to right, #ff1500a8, #1100ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+.ld {
+  display: flex;
+  column-gap: 15px;
+}
+.kt {
+  width: 40px;
+  height: 40px;
+}
+
+.dl {
+  column-gap: 15px;
+}
+
+.fz {
+  font-size: 1.7rem;
+  background: linear-gradient(to right, #ff1500a8, #1100ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

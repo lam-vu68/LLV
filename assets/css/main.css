@@ -1,15 +1,18 @@
 .container-full {
-  height: 80vh;
+  height: 583px;
   background-image: url(./img/colin-watts-Vp6FWs5OGBQ-unsplash.jpg);
   background-size: cover;
   background-position: end;
+}
+body {
+  background-color: #fffcf4;
 }
 .container {
   position: relative;
 }
 /* ====================================header====================================== */
 .bg-color {
-  background-color: #efefef2b;
+  background-color: #efefef7c;
 }
 .nav-item {
   transition-duration: 0.8s;
@@ -45,11 +48,15 @@
   padding-top: 100px;
 }
 .thumb {
-  height: 180px;
-  width: 180px;
+  height: 150px;
+  width: 150px;
   border-radius: 50%;
   object-fit: cover;
   border: 1px solid #8f8f8f3a;
+  transition-duration: 0.5s;
+}
+.thumb:hover {
+  transform: scale(1.1);
 }
 
 .heading {
@@ -102,7 +109,7 @@
   display: flex;
   column-gap: 15px;
   position: absolute;
-  bottom: -156px;
+  bottom: -188px;
   justify-content: center;
   align-items: center;
 }
@@ -125,35 +132,32 @@
 /* ============================main============================ */
 .main-about {
   margin-top: 100px;
+  font-family: "Roboto", sans-serif;
 }
 
 .about {
-  max-width: 760px;
-  margin: 0 auto;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.ttcb {
-  width: 760px;
-}
-.about {
-  background-color: #e6f0fa;
+  background-color: #ecf1f7;
   padding: 35px 15px;
   border-radius: 40px;
   position: relative;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 .ttcb {
   position: absolute;
-  background-color: #fff5f5;
+  background-color: #fffcfc;
   padding: 35px 15px;
   border-radius: 40px;
-  bottom: -232px;
-  left: 250px;
+  bottom: -235px;
+  left: 295px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 .main-heading {
   color: #92c8fe;
+  font-size: 2.3rem;
+  font-weight: normal;
 }
 
 .main-heading-tt {
   color: #f799b4;
+  font-size: 2.3rem;
 }

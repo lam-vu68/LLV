@@ -3,170 +3,233 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV - Học Vấn Chuyên Nghiệp</title>
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f0f2f5; /* Nền xám nhạt */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
+      * {
         margin: 0;
-        padding: 20px; /* Thêm padding để không sát mép trên mobile */
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, sans-serif;
       }
-      .cv-container {
-        position: relative;
-        width: 600px;
-        max-width: 100%; /* Đảm bảo không vượt quá kích thước màn hình */
-        perspective: 1000px; /* Tạo hiệu ứng 3D nhẹ */
-      }
-      .card {
-        background: #ffffff;
-        border-radius: 15px;
-        padding: 20px;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-        margin-bottom: 20px;
-        position: relative;
-        z-index: 1;
-        transition: transform 0.3s ease;
-      }
-      .card.about {
-        background: #e6f0fa; /* Nền xanh nhạt cho phần About */
-        transform: translateX(-20px); /* Dịch trái nhẹ */
-      }
-      .card.info {
-        background: #fff5f5; /* Nền hồng nhạt cho phần Info */
-        transform: translateX(20px) translateY(-50px); /* Dịch phải và chồng lên phần About */
-        z-index: 2;
-      }
-      h2 {
-        font-size: 24px;
-        margin-bottom: 15px;
-        background: linear-gradient(
-          to right,
-          #87ceeb,
-          #dda0dd
-        ); /* Gradient xanh dương nhạt -> tím nhạt */
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-      }
-      p {
-        font-size: 16px;
-        line-height: 1.6;
-        margin: 5px 0;
+
+      body {
+        background-color: #eef2f7;
         color: #333;
+        padding: 40px;
+        line-height: 1.8;
       }
-      .info-item {
+
+      .cv-container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        border: 1px solid #e0e6ed;
         display: flex;
-        justify-content: space-between;
+        gap: 30px;
+      }
+
+      .section-title {
+        font-size: 28px;
+        color: #3b82f6;
+        position: relative;
+        margin-bottom: 40px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+      }
+
+      .section-title::after {
+        content: "";
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(to right, #3b82f6, #93c5fd);
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+      }
+
+      .education-wrapper {
+        flex: 2;
+      }
+
+      .education-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 30px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .education-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .education-icon {
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(to bottom right, #3b82f6, #1e3a8a);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 24px;
+        margin-right: 20px;
+        flex-shrink: 0;
+      }
+
+      .education-content h3 {
+        font-size: 20px;
+        color: #3b82f6;
+        margin-bottom: 8px;
+        font-weight: 600;
+      }
+
+      .education-content p {
+        font-size: 16px;
+        color: #4b5563;
+        margin-bottom: 5px;
+      }
+
+      .education-content .date {
+        font-size: 14px;
+        color: #6b7280;
+        font-style: italic;
+      }
+
+      .sidebar {
+        flex: 1;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      .sidebar h4 {
+        font-size: 18px;
+        color: #3b82f6;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #e0e6ed;
+        padding-bottom: 5px;
+      }
+
+      .sidebar p {
+        font-size: 14px;
+        color: #4b5563;
         margin-bottom: 10px;
       }
-      .info-item label {
-        font-weight: bold;
-        color: #555;
-      }
-      .info-item span {
-        color: #333;
-        text-align: right; /* Căn phải trên mobile để dễ đọc */
-      }
-      .highlight {
-        color: #2ecc71; /* Màu xanh lá nổi bật cho email */
+
+      /* Thanh kỹ năng (Skill Bar) */
+      .skill-bar {
+        margin-bottom: 15px;
       }
 
-      /* Responsive Design */
-      @media (max-width: 768px) {
-        /* Máy tính bảng và điện thoại */
+      .skill-bar .skill-name {
+        font-size: 14px;
+        color: #1e3a8a;
+        margin-bottom: 5px;
+      }
+
+      .skill-bar .progress {
+        width: 100%;
+        height: 10px;
+        background-color: #e0e6ed;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+
+      .skill-bar .progress-bar {
+        height: 100%;
+        background: linear-gradient(to right, #3b82f6, #60a5fa);
+        border-radius: 5px;
+        transition: width 1s ease;
+      }
+
+      /* Responsive */
+      @media (max-width: 600px) {
         .cv-container {
-          width: 100%; /* Chiếm toàn bộ chiều rộng */
-          padding: 0 10px;
+          flex-direction: column;
+          padding: 20px;
         }
-        .card {
-          padding: 15px; /* Giảm padding */
+
+        .education-item {
+          flex-direction: column;
+          padding: 15px;
+        }
+
+        .education-icon {
           margin-bottom: 15px;
+          margin-right: 0;
         }
-        .card.about {
-          transform: none; /* Bỏ hiệu ứng dịch trái */
+
+        .education-content h3 {
+          font-size: 18px;
         }
-        .card.info {
-          transform: none; /* Bỏ hiệu ứng dịch phải và chồng lấn */
-          translatey: 0; /* Đặt lại vị trí */
-        }
-        h2 {
-          font-size: 20px; /* Giảm kích thước tiêu đề */
-        }
-        p {
-          font-size: 14px; /* Giảm kích thước chữ */
-        }
-        .info-item {
+
+        .education-content p {
           font-size: 14px;
         }
-      }
 
-      @media (max-width: 480px) {
-        /* Điện thoại nhỏ */
-        .cv-container {
-          padding: 0 5px;
-        }
-        .card {
-          padding: 10px; /* Giảm padding thêm */
-          margin-bottom: 10px;
-        }
-        h2 {
-          font-size: 18px; /* Giảm kích thước tiêu đề thêm */
-        }
-        p {
-          font-size: 12px; /* Giảm kích thước chữ thêm */
-        }
-        .info-item {
-          font-size: 12px;
-          flex-direction: column; /* Chuyển thành cột để dễ đọc */
-          gap: 5px; /* Khoảng cách giữa label và span */
-        }
-        .info-item label {
-          font-size: 12px;
-        }
-        .info-item span {
-          text-align: left; /* Căn trái trên mobile nhỏ */
+        .sidebar {
+          margin-top: 20px;
         }
       }
     </style>
   </head>
   <body>
     <div class="cv-container">
-      <div class="card about">
-        <h2>About</h2>
-        <p>
-          Hello! I am Anthony Barnett, Web Developer, Graphic Designer and
-          Photographer.
-        </p>
-        <p>
-          Creative CV is a HTML resume template for professionals. Built with
-          Bootstrap 4, Now UI Kit and FontAwesome, this modern and responsive
-          template is perfect to showcase your portfolio, skills and experience.
-        </p>
+      <div class="education-wrapper">
+        <h2 class="section-title">Học Vấn</h2>
+
+        <div class="education-item">
+          <div class="education-icon">🎓</div>
+          <div class="education-content">
+            <h3>Đại học Bình Dương</h3>
+            <p>Ngành: Công nghệ Thông tin</p>
+            <p class="date">2023 - Hiện tại (Sinh viên năm 2)</p>
+          </div>
+        </div>
+
+        <div class="education-item">
+          <div class="education-icon">🏫</div>
+          <div class="education-content">
+            <h3>Trường THPT [Tên trường của bạn]</h3>
+            <p>Học sinh tốt nghiệp THPT</p>
+            <p class="date">2020 - 2023</p>
+          </div>
+        </div>
       </div>
-      <div class="card info">
-        <h2>Basic Information</h2>
-        <div class="info-item">
-          <label>AGE:</label>
-          <span>24</span>
+
+      <div class="sidebar">
+        <h4>Thông tin bổ sung</h4>
+        <p><strong>GPA:</strong> 3.5/4.0</p>
+        <p><strong>Hoạt động:</strong> Tham gia Câu lạc bộ CNTT</p>
+        <p><strong>Chứng chỉ:</strong> IELTS 6.0 (2024)</p>
+
+        <h4>Kỹ năng</h4>
+        <div class="skill-bar">
+          <div class="skill-name">HTML</div>
+          <div class="progress">
+            <div class="progress-bar" style="width: 80%"></div>
+          </div>
         </div>
-        <div class="info-item">
-          <label>EMAIL:</label>
-          <span class="highlight">anthony@company.com</span>
+        <div class="skill-bar">
+          <div class="skill-name">CSS</div>
+          <div class="progress">
+            <div class="progress-bar" style="width: 70%"></div>
+          </div>
         </div>
-        <div class="info-item">
-          <label>PHONE:</label>
-          <span>+1718-111-0011</span>
-        </div>
-        <div class="info-item">
-          <label>ADDRESS:</label>
-          <span>140, City Center, New York, U.S.A</span>
-        </div>
-        <div class="info-item">
-          <label>LANGUAGE:</label>
-          <span>English, German, French</span>
+        <div class="skill-bar">
+          <div class="skill-name">JavaScript</div>
+          <div class="progress">
+            <div class="progress-bar" style="width: 50%"></div>
+          </div>
         </div>
       </div>
     </div>

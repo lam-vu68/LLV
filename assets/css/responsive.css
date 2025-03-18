@@ -5,3 +5,14 @@
     margin-top: 40px;
   }
 }
+
+@media (max-width: 768px) {
+  .bg-lh {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 30px;
+  }
+  .bg-right-lh {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 30px;
+  }
+}

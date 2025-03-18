@@ -361,7 +361,7 @@ button {
 
 .swiper-slide {
   width: 30%;
-  margin: 25px;
+  margin: 15px;
 }
 
 .swiper-slide:not(.swiper-slide-active) {
@@ -434,11 +434,11 @@ button {
   display: block;
   width: 100%;
   padding: 12px;
-  background-color: #27ae60;
-  color: #fff;
+  background-color: #40ff90;
+  color: #ffffff;
   border: none;
   border-radius: 5px;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
@@ -483,4 +483,53 @@ label {
 
 .email--fix {
   word-break: break-all;
+}
+
+/* =====================================ft =============================*/
+.footer-full {
+  margin-top: 160px;
+  width: 100%;
+  background-color: #f4f6f8;
+  min-height: 300px;
+  padding: 40px;
+}
+
+.fix-ft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-icon-ft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #0a0000ab;
+  border-radius: 50%;
+  transition-duration: 0.5s;
+  margin: 0 5px;
+}
+
+.kt-ft {
+  width: 15px;
+  height: 15px;
+}
+
+.heading-ft {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #1d4267;
+  margin-bottom: 15px;
+  font-family: "Nunito", sans-serif;
+}
+
+.desc-ft {
+  font-size: 2.3rem;
+  color: #1d4267;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-style: italic;
 }

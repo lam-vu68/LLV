@@ -12,10 +12,13 @@
       referrerpolicy="no-referrer"
     />
     <!-- nhúng font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
       rel="stylesheet"
     />
+    <!-- bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -31,7 +34,7 @@
     <link rel="stylesheet" href="./assets/css/responsive.css" />
     <title>MyCVLLV</title>
   </head>
-  <body style="height: 10000px">
+  <body>
     <!-- header -->
     <header class="container-full">
       <nav class="navbar navbar-expand-md bg-color bg-header fixed-top">
@@ -63,6 +66,9 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">SỞ THÍCH</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">LIÊN HỆ</a>
               </li>
             </ul>
             <ul class="navbar-nav ms-auto">
@@ -98,7 +104,6 @@
       <div class="dl d-flex justify-content-center">
         <a class="btn fz btn-primary" href="#" role="button">Liên Hệ</a>
 
-        <!-- <a class="btn fz btn-primary" hr ef="#" role="button">Tải Xuống CV</a> -->
         <button class="btn fz btn-primary print-btn" onclick="window.print()">
           <i class="fas fa-print"></i> In CV
         </button>
@@ -106,7 +111,7 @@
 
       <div class="container">
         <div class="lh">
-          <div title="Theo Dõi Tôi" class="bg-icon">
+          <div title="" class="bg-icon">
             <a
               target="_blank"
               href="https://www.facebook.com/lam.vu.284615?mibextid=ZbWKwL"
@@ -187,7 +192,7 @@
       <div class="container">
         <div class="main-about row justify-content-center">
           <div class="about col-8">
-            <h1 class="main-heading">VỀ TÔI</h1>
+            <h1 class="main-heading" id="About">VỀ TÔI</h1>
             <p class="main-desc">
               Hello! I am Anthony Barnett, Web Developer, Graphic Designer and
               Photographer. Creative CV is a HTML resume template for
@@ -205,7 +210,9 @@
               </div>
               <div class="row">
                 <div class="col-md-4"><strong>EMAIL:</strong></div>
-                <div class="col-md-8 email--fix">23050102@student.bdu.edu.vn</div>
+                <div class="col-md-8 email--fix">
+                  23050102@student.bdu.edu.vn
+                </div>
               </div>
               <div class="row">
                 <div class="col-md-4"><strong>SĐT:</strong></div>
@@ -227,7 +234,7 @@
       <div class="container muctieu">
         <div class="row justify-content-center">
           <div class="col-8 bd-mt">
-            <h1 class="heading-mt">MỤC TIÊU NGHỀ NGHIỆP</h1>
+            <h1 class="heading-mt" id="Target">MỤC TIÊU NGHỀ NGHIỆP</h1>
             <div class="content-mt d-flex align-items-center gap-2">
               <div class="img-mt">
                 <img class="img" src="./assets/imgs/mt.jpg" alt="" />
@@ -472,7 +479,7 @@
             <p class="desc-lhh">Hiệp thành, Thủ Dầu 1, Bình Dương</p>
             <p class="desc-lhh"><strong>Điện Thoại:</strong></p>
             <p class="desc-lhh">+84 384 441 045</p>
-            <p class="desc-lhh":><strong>Email:</strong></p>
+            <p class="desc-lhh" :><strong>Email:</strong></p>
             <p class="desc-lhh email--fix">23050102@student.bdu.edu.vn</p>
           </div>
 
@@ -480,7 +487,7 @@
             <h1 class="heading-lh-left">GỬI TIN NHẮN</h1>
             <form>
               <div class="form-group">
-                <label for="name">Họ và Tên</label>
+                <label for="name">Họ và tên</label>
                 <input
                   type="text"
                   id="name"
@@ -511,21 +518,108 @@
                 />
               </div>
 
-
               <div class="form-group">
                 <label for="message">Tin nhắn</label>
                 <textarea
                   id="message"
                   name="message"
                   placeholder="Nhập tin nhắn của bạn"
-                  required rows="3"
+                  required
+                  rows="3"
                 ></textarea>
               </div>
               <button type="submit" class="submit-btn">Gửi</button>
+            </form>
           </div>
         </div>
       </div>
     </main>
+
+    <!-- footer -->
+    <div class="footer-full">
+      <div class="content-ft p-5">
+        <div class="top-ft text-center">
+          <h1 class="heading-ft">Lý Lâm Vũ</h1>
+          <p class="desc-ft">Lập Trình Viên Chuyên Nghiệp</p>
+        </div>
+        <div class="icon-ft d-flex justify-content-center align-items-center">
+          <div title="" class="bg-icon-ft">
+            <a
+              target="_blank"
+              href="https://www.facebook.com/lam.vu.284615?mibextid=ZbWKwL"
+            >
+              <svg
+                class="kt-ft"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 320 512"
+              >
+                <path
+                  fill="#ffffff"
+                  d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"
+                />
+              </svg>
+            </a>
+          </div>
+          <div class="bg-icon-ft">
+            <a target="_blank" href="https://github.com/lam-vu68">
+              <svg
+                class="kt-ft"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 480 512"
+              >
+                <path
+                  fill="#ffffff"
+                  d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"
+                />
+              </svg>
+            </a>
+          </div>
+          <div class="bg-icon-ft">
+            <a target="_blank" href="https://www.tiktok.com/@lam10.2">
+              <svg
+                class="kt-ft"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+              >
+                <path
+                  fill="#ffffff"
+                  d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"
+                />
+              </svg>
+            </a>
+          </div>
+          <div class="bg-icon-ft">
+            <a target="_blank" href="https://www.instagram.com/lamvu7157/">
+              <svg
+                class="kt-ft"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+              >
+                <path
+                  fill="#ffffff"
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                />
+              </svg>
+            </a>
+          </div>
+          <div class="bg-icon-ft">
+            <a target="_blank" href="mailto:23050102@student.bdu.edu.vn">
+              <svg
+                class="kt-ft"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+              >
+                <path
+                  fill="#ffffff"
+                  d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zM218 271.7L64.2 172.4C66 156.4 79.5 144 96 144l256 0c16.5 0 30 12.4 31.8 28.4L230 271.7c-1.8 1.2-3.9 1.8-6 1.8s-4.2-.6-6-1.8zm29.4 26.9L384 210.4 384 336c0 17.7-14.3 32-32 32L96 368c-17.7 0-32-14.3-32-32l0-125.6 136.6 88.2c7 4.5 15.1 6.9 23.4 6.9s16.4-2.4 23.4-6.9z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"

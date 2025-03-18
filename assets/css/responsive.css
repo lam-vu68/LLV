@@ -33,3 +33,15 @@
     display: none;
   }
 }
+
+@media (max-width: 576px) {
+  .about,
+  .ttcb,
+  .bd-mt {
+    width: 85%;
+  }
+
+  .muctieu {
+    margin-top: 200px;
+  }
+}

@@ -15,4 +15,18 @@ var swiper = new Swiper(".mySwiper", {
     el: ".swiper-pagination",
     clickable: true,
   },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    768: {
+      slidesPerView: "auto",
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: "auto",
+      spaceBetween: 40,
+    },
+  },
 });

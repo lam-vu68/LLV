@@ -20,7 +20,7 @@ button {
 }
 /* ====================================header====================================== */
 .bg-color {
-  background-color: #efefeff0;
+  background-color: #efefeff5;
 }
 .nav-item {
   transition-duration: 0.8s;
@@ -109,6 +109,16 @@ button {
   background-clip: text;
   color: transparent;
   font-weight: 600;
+  border: 1px solid #c2fafc;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+.fz-bt {
+  margin-left: auto;
+  font-size: 1.7rem;
+  color: #ffffff;
+  background-color: #16452a;
+  border: none;
+  font-weight: 600;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
@@ -143,6 +153,9 @@ button {
   font-family: "Roboto", sans-serif;
 }
 
+.main-desc {
+  text-align: justify;
+}
 .about {
   background-color: #f6f8ff;
   padding: 35px 15px;
@@ -427,21 +440,25 @@ button {
 }
 .form-group label {
   font-size: 1.7rem;
-  font-weight: 600;
+  font-weight: 800;
   display: block;
+  font-family: "Nunito", sans-serif;
 }
 .submit-btn {
   display: block;
   width: 100%;
   padding: 12px;
-  background-color: #40ff90;
+  background-color: #8a95bb;
   color: #ffffff;
   border: none;
   border-radius: 5px;
   font-size: 1.8rem;
   font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
+  transition: background-color 0.3s;
+}
+.submit-btn:hover {
+  background-color: #597bf6;
 }
 
 input,
@@ -532,4 +549,8 @@ label {
   font-family: "Nunito", sans-serif;
   font-weight: 600;
   font-style: italic;
+}
+
+.incv-fib {
+  margin-right: auto;
 }

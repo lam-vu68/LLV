@@ -16,3 +16,20 @@
     border-bottom-left-radius: 30px;
   }
 }
+
+@media (max-width: 434px) {
+  .lh {
+    bottom: -131px;
+  }
+  .bg-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .kt {
+    width: 20px;
+    height: 20px;
+  }
+  .fz-bt {
+    display: none;
+  }
+}

@@ -71,22 +71,16 @@ button {
   text-align: center;
   margin-top: 15px;
   font-size: 5rem;
-  font-weight: 700;
-  background: linear-gradient(to right, #a3bffa, #fed7e2);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  font-weight: 550;
+  color: #fff;
   text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
 }
 
 .desc {
   font-size: 3rem;
   font-weight: 550;
-  background: linear-gradient(to right, #a3bffa, #fed7e2);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   text-align: center;
 }
 .ld {
@@ -104,22 +98,15 @@ button {
 
 .fz {
   font-size: 1.7rem;
-  background: linear-gradient(to right, #464d17a8, #f8d300);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: #fefeff;
   font-weight: 600;
-  border: 1px solid #c2fafc;
+  background-color: #f4abdf53;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-}
-.fz-bt {
-  margin-left: auto;
-  font-size: 1.7rem;
-  color: #ffffff;
-  background-color: #16452a;
   border: none;
-  font-weight: 600;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  padding: 7px;
+}
+.fz:hover {
+  background-color: #5e528f;
 }
 
 .lh {
@@ -127,7 +114,7 @@ button {
   display: flex;
   column-gap: 15px;
   position: absolute;
-  bottom: -188px;
+  bottom: -183px;
   justify-content: center;
   align-items: center;
 }
@@ -361,43 +348,70 @@ button {
 
 /* ============================= Sở Thích============================== */
 .sothich {
-  margin-top: 160px;
+  margin: 160px auto 0 auto;
+  width: 100%;
+  max-width: 878px; /* Giới hạn chiều rộng tối đa trên desktop */
 }
 
-.swiper {
-  padding: 30px;
-  max-width: 878px;
-  margin: 0 auto;
-  border-radius: 30px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  background-color: #eceef8;
+.heading-st {
+  text-align: center;
+  font-size: 3.5rem;
+  color: #273673;
+  font-weight: 600;
+  padding-bottom: 15px;
 }
 
+/* Đảm bảo swiper và slide căn giữa */
+.mySwiper {
+  width: 100%;
+  padding: 0 10px; /* Thêm padding nhỏ để tránh sát lề */
+}
+
+/* Đảm bảo swiper-slide căn giữa và không bị lệch */
 .swiper-slide {
-  width: 30%;
-  margin: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px; /* Chiều rộng cố định cho slide */
+  margin: 0 auto; /* Căn giữa slide */
 }
 
 .swiper-slide:not(.swiper-slide-active) {
   filter: blur(1px);
 }
+/* Card bên trong slide */
 .card {
-  min-height: 347px;
+  width: 100%;
+  max-width: 280px; /* Đảm bảo card không vượt quá slide */
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  min-height: 350px;
 }
-.heading-st {
-  text-align: center;
-  font-size: 3.5rem;
-  color: #212a51;
-  font-weight: 600;
-  padding-bottom: 15px;
-}
+
+/* Hình ảnh trong card */
 .thumb-st {
-  transition-duration: 0.5s;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
-.thumb-st:hover {
-  transform: scale(1.1);
-  border-radius: 20px;
+
+/* Tiêu đề và mô tả */
+.card-body {
+  padding: 15px;
 }
+
+.card-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 1.6rem;
+  color: #555;
+}
+
 /* ===========================lh============================= */
 .lienhe {
   margin-top: 160px;

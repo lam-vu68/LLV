@@ -369,13 +369,12 @@ document.getElementById("lang-vi").addEventListener("click", function (e) {
 // Đặt ngôn ngữ mặc định là tiếng Việt khi tải trang
 changeLanguage("vi");
 
-// swiper
 var swiper = new Swiper(".mySwiper", {
   effect: "coverflow",
   grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: "auto",
-  initialSlide: 2,
+  centeredSlides: true, // Giữ slide luôn căn giữa trên mọi kích thước màn hình
+  slidesPerView: "auto", // Tự động điều chỉnh số slide hiển thị
+  initialSlide: 2, // Bắt đầu từ slide thứ 3 (giữa)
   coverflowEffect: {
     rotate: 0,
     stretch: 0,
@@ -388,18 +387,27 @@ var swiper = new Swiper(".mySwiper", {
     clickable: true,
   },
   breakpoints: {
+    // Mobile nhỏ (320px trở lên)
     320: {
-      initialSlide: 0,
-      slidesPerView: 1,
-      spaceBetween: 10,
+      slidesPerView: 1, // Chỉ hiển thị 1 slide
+      spaceBetween: -10, // Khoảng cách giữa các slide
+      centeredSlides: true, // Căn giữa slide
     },
+    // Tablet (768px trở lên)
     768: {
-      slidesPerView: "auto",
+      slidesPerView: "auto", // Tự động hiển thị nhiều slide
       spaceBetween: 20,
+      coverflowEffect: {
+        depth: 200, // Tăng depth một chút
+      },
     },
+    // Desktop (1024px trở lên)
     1024: {
       slidesPerView: "auto",
       spaceBetween: 40,
+      coverflowEffect: {
+        depth: 300, // Giữ depth mặc định
+      },
     },
   },
 });

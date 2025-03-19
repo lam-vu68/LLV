@@ -21,7 +21,7 @@ const dict = {
     },
     about: {
       title: "About Me",
-      desc: "Hello! I am Lý Lâm Vũ, a second-year student living and studying in Bình Dương, originally from Bình Phước. I am passionate about web development, graphic design, and photography. Creative CV is a resume template I use to showcase my personal projects and skills. Built with HTML, CSS, JS, FontAwesome, and utilizing libraries like Bootstrap, Swiper, and AOS, this template is modern and responsive, perfect for presenting what I’ve learned and experienced on my journey to becoming a professional.",
+      desc: "Hello! I am Ly Lam Vu, a second-year student living and studying in Bình Dương, originally from Binh Phuoc. I am passionate about web development, graphic design, and photography. Creative CV is a resume template I use to showcase my personal projects and skills. Built with HTML, CSS, JS, FontAwesome, and utilizing libraries like Bootstrap, Swiper, and AOS, this template is modern and responsive, perfect for presenting what I’ve learned and experienced on my journey to becoming a professional.",
       basicInfoTitle: "Basic Information",
       ageLabel: "AGE:",
       emailLabel: "EMAIL:",

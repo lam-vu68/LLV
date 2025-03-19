@@ -110,7 +110,7 @@ const dict = {
   },
   vi: {
     khac: {
-      mtnn: "MỤC TIÊU NGHỀ NGHIỆP",
+      mtnn: "MỤC TIÊU",
       hv: "HỌC VẤN",
       kn: "KĨ NĂNG",
       st: "SỞ THÍCH",
@@ -153,7 +153,7 @@ const dict = {
       languageValue: "Tiếng Việt",
     },
     target: {
-      title: "MỤC TIÊU NGHỀ NGHIỆP",
+      title: "MỤC TIÊU",
       target1Title: "Trở thành Lập trình viên Cao cấp",
       target1Desc:
         "Phấn đấu nâng cao kỹ năng phát triển full-stack và đảm nhận vai trò dẫn dắt dự án trong vòng 3 năm tới.",
@@ -168,7 +168,7 @@ const dict = {
         "Tập trung cải thiện kỹ năng Photoshop để tạo ra các giao diện thân thiện với người dùng.",
     },
     education: {
-      title: "Học Vấn",
+      title: "HỌC VẤN",
       edu1Title: "Đại học Bình Dương",
       edu1Major: "Ngành: Công nghệ Thông tin",
       edu1Time: "2025 - Hiện tại (Sinh viên năm 2)",
@@ -200,7 +200,7 @@ const dict = {
       interest5Desc: "Chạy bộ buổi sáng để giữ dáng và thư giãn đầu óc.",
     },
     contact: {
-      title: "LIÊN HỆ VỚI TÔI",
+      title: "LIÊN HỆ",
       contactAddressLabel: "Địa Chỉ:",
       contactAddressValue: "Hiệp thành, Thủ Dầu 1, Bình Dương",
       contactPhoneLabel: "Điện Thoại:",

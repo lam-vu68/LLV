@@ -115,7 +115,7 @@ const dict = {
       kn: "KĨ NĂNG",
       st: "SỞ THÍCH",
       lh: "LIÊN HỆ VỚI TÔI",
-      lt: "Professional Programmer",
+      lt: "Lập Trình Viên Chuyên Nghiệp",
       formNamePlaceholder: "Nhập họ và tên",
       formEmailPlaceholder: "Nhập email",
       formSubjectPlaceholder: "Nhập chủ đề",
@@ -226,6 +226,7 @@ function changeLanguage(lang) {
   document.getElementById("st").innerHTML = langs.khac.st;
   document.getElementById("lt").innerHTML = langs.khac.lt;
   document.getElementById("kn").innerHTML = langs.khac.kn;
+  document.getElementById("lh").innerHTML = langs.khac.lh;
   document.getElementById("nameInput").placeholder =
     langs.khac.formNamePlaceholder;
   document.getElementById("emailInput").placeholder =

@@ -381,7 +381,9 @@ button {
 .swiper-slide:not(.swiper-slide-active) {
   filter: blur(1px);
 }
-
+.card {
+  min-height: 347px;
+}
 .heading-st {
   text-align: center;
   font-size: 3.5rem;

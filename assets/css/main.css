@@ -3,6 +3,7 @@
   background-image: url(./img/colin-watts-Vp6FWs5OGBQ-unsplash.jpg);
   background-size: cover;
   background-position: end;
+  position: relative;
 }
 a {
   text-decoration: none;
@@ -28,7 +29,6 @@ button {
   font-size: inherit;
 }
 .container {
-  position: relative;
 }
 /* ====================================header====================================== */
 .bg-color {
@@ -126,7 +126,7 @@ button {
   display: flex;
   column-gap: 15px;
   position: absolute;
-  bottom: -183px;
+  bottom: -27px;
   justify-content: center;
   align-items: center;
 }

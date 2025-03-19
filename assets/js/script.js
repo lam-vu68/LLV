@@ -368,6 +368,7 @@ document.getElementById("lang-vi").addEventListener("click", function (e) {
 
 // Đặt ngôn ngữ mặc định là tiếng Việt khi tải trang
 changeLanguage("vi");
+
 // swiper
 var swiper = new Swiper(".mySwiper", {
   effect: "coverflow",
@@ -388,6 +389,7 @@ var swiper = new Swiper(".mySwiper", {
   },
   breakpoints: {
     320: {
+      initialSlide: 0,
       slidesPerView: 1,
       spaceBetween: 10,
     },

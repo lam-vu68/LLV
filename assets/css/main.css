@@ -6,11 +6,17 @@
 }
 a {
   text-decoration: none;
-  color: #212529;
-  font-style: italic;
 }
-a:hover {
+.link-mt {
+  color: #212529;
+}
+a:hover,
+.desc-lhh--a:hover {
   color: #0024b6;
+}
+.desc-lhh--a {
+  color: #2c3e50;
+  font-style: italic;
 }
 
 input,

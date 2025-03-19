@@ -4,8 +4,9 @@
   background-size: cover;
   background-position: end;
 }
-body {
-  /* background-color: #fffcf4; */
+a {
+  text-decoration: none;
+  color: #212529;
 }
 input,
 textarea,
@@ -193,10 +194,10 @@ button {
 
 .content-mt {
   margin-top: 30px;
-  transition-duration: 0.45s;
+  transition: transform 0.45s;
 }
 .content-mt:hover {
-  transform: translateY(-4px);
+  transform: translateY(-4px) !important;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 .img {
@@ -245,7 +246,7 @@ button {
   transition-duration: 0.45s;
 }
 .top-hv:hover {
-  transform: translateY(-4px);
+  transform: translateY(-4px) !important;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 .heading-hv::after {

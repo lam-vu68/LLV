@@ -18,17 +18,22 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
       rel="stylesheet"
     />
-    <!-- bootstrap -->
+    <!-- bootstrap css-->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
+    <!-- swiper css-->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <!-- AOS animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- my style -->
     <link rel="stylesheet" href="./assets/css/base.css" />
     <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="stylesheet" href="./assets/css/responsive.css" />
@@ -53,38 +58,41 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="#About">VỀ TÔI</a>
+                <a class="nav-link" href="#About" id="About">VỀ TÔI</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#Target">MỤC TIÊU</a>
+                <a class="nav-link" href="#Target" id="Target">MỤC TIÊU</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#Education">HỌC VẤN</a>
+                <a class="nav-link" href="#Education" id="Education">HỌC VẤN</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#Skill">KĨ NĂNG</a>
+                <a class="nav-link" href="#Skill" id="Skill">KĨ NĂNG</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#Interests">SỞ THÍCH</a>
+                <a class="nav-link" href="#Interests" id="Interests"
+                  >SỞ THÍCH</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#Contact">LIÊN HỆ</a>
+                <a class="nav-link" href="#Contact" id="Contact">LIÊN HỆ</a>
               </li>
             </ul>
             <ul class="navbar-nav ms-auto">
-              <li class="nav-item dropdown">
+              <li class="nav-item dropdown" id="NN">
                 <a
                   class="nav-link dropdown-toggle"
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
+                  id="languageLabel"
                 >
                   NGÔN NGỮ
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">VI</a></li>
-                  <li><a class="dropdown-item" href="#">En</a></li>
+                  <li><a class="dropdown-item" href="#" id="lang-vi">VI</a></li>
+                  <li><a class="dropdown-item" href="#" id="lang-en">En</a></li>
                 </ul>
               </li>
             </ul>
@@ -94,24 +102,28 @@
 
       <div class="nd">
         <img class="thumb" src="./assets/imgs/avatar.png" alt="avatar" />
-
         <div class="content">
           <h1 class="heading">Lý Lâm Vũ</h1>
-          <p class="desc">Lập Trình Viên Chuyên Nghiệp</p>
+          <p class="desc" id="jobTitle">Lập Trình Viên Chuyên Nghiệp</p>
         </div>
       </div>
 
       <div class="dl d-flex justify-content-center">
-        <a class="btn fz btn-primary" href="#Contact" role="button">Thuê Tôi</a>
-
-        <button class="btn fz btn-primary print-btn" onclick="window.print()">
+        <a class="btn fz btn-primary" href="#Contact" role="button" id="hireMe"
+          >Thuê Tôi</a
+        >
+        <button
+          class="btn fz btn-primary print-btn"
+          onclick="window.print()"
+          id="printCV"
+        >
           <i class="fas fa-print"></i> In CV
         </button>
       </div>
 
       <div class="container">
         <div class="lh">
-          <div title="" class="bg-icon">
+          <div title="Facebook" class="bg-icon" id="facebookIcon">
             <a
               target="_blank"
               href="https://www.facebook.com/lam.vu.284615?mibextid=ZbWKwL"
@@ -128,7 +140,7 @@
               </svg>
             </a>
           </div>
-          <div class="bg-icon">
+          <div title="GitHub" class="bg-icon" id="githubIcon">
             <a target="_blank" href="https://github.com/lam-vu68">
               <svg
                 class="kt"
@@ -142,7 +154,7 @@
               </svg>
             </a>
           </div>
-          <div class="bg-icon">
+          <div title="TikTok" class="bg-icon" id="tiktokIcon">
             <a target="_blank" href="https://www.tiktok.com/@lam10.2">
               <svg
                 class="kt"
@@ -156,7 +168,7 @@
               </svg>
             </a>
           </div>
-          <div class="bg-icon">
+          <div title="Instagram" class="bg-icon" id="instagramIcon">
             <a target="_blank" href="https://www.instagram.com/lamvu7157/">
               <svg
                 class="kt"
@@ -170,7 +182,7 @@
               </svg>
             </a>
           </div>
-          <div class="bg-icon">
+          <div title="Email" class="bg-icon" id="emailIcon">
             <a target="_blank" href="mailto:23050102@student.bdu.edu.vn">
               <svg
                 class="kt"
@@ -188,52 +200,59 @@
       </div>
     </header>
 
-    <div class="incv-fib fixed-bottom p-3 d-flex">
-      <button class="btn fz-bt btn-primary print-btn" onclick="window.print()">
-        <i class="fas fa-print"></i> In CV
-      </button>
-    </div>
     <!-- main -->
     <main>
       <div class="container">
         <div class="main-about row justify-content-center">
-          <div class="about col-8">
-            <h1 class="main-heading" id="About">VỀ TÔI</h1>
-            <p class="main-desc">
-              Xin chào! Tôi là Lý Lâm Vũ, một sinh viên năm 2 đang sinh sống tại
-              Bình Dương, quê quán Bình Phước. Tôi đam mê phát triển web, thiết
-              kế đồ họa và nhiếp ảnh. Creative CV là một mẫu hồ sơ m à tôi sử
-              dụng để thể hiện các dự án cá nhân và kỹ năng của mình. Được xây
-              dựng bằng Bootstrap 5, HTML, CSS, JS, FontAwesome và sử dụng thư
-              viện Swiper, mẫu này hiện đại và responsive, phù hợp để giới thiệu
-              những gì tôi đã học và trải nghiệm trong hành trình trở thành một
-              chuyên gia.
+          <div class="about col-8" data-aos="fade-up">
+            <h1 class="main-heading" id="aboutTitle">VỀ TÔI</h1>
+            <p class="main-desc" id="aboutDesc">
+              Xin chào! Tôi là Lý Lâm Vũ, một sinh viên năm 2 đang sinh sống và
+              học tập tại Bình Dương, quê quán Bình Phước. Tôi đam mê phát triển
+              web, thiết kế đồ họa và nhiếp ảnh. Creative CV là một mẫu hồ sơ mà
+              tôi sử dụng để thể hiện các dự án cá nhân và kỹ năng của mình.
+              Được xây dựng bằng HTML, CSS, JS, FontAwesome và sử dụng thư viện
+              Bootstrap, Swiper, AOS, mẫu này hiện đại và responsive, phù hợp để
+              giới thiệu những gì tôi đã học và trải nghiệm trong hành trình trở
+              thành một chuyên gia.
             </p>
           </div>
           <div class="main-ttcb row justify-content-center">
-            <div class="ttcb col-8">
-              <h1 class="main-heading-tt">Thông tin cơ bản</h1>
+            <div class="ttcb col-8" data-aos="fade-up">
+              <h1 class="main-heading-tt" id="basicInfoTitle">
+                Thông tin cơ bản
+              </h1>
               <div class="row justify-content-between">
-                <div class="col-md-4"><strong>TUỔI:</strong></div>
+                <div class="col-md-4"><strong id="ageLabel">TUỔI:</strong></div>
                 <div class="col-md-8">20</div>
               </div>
               <div class="row">
-                <div class="col-md-4"><strong>EMAIL:</strong></div>
+                <div class="col-md-4">
+                  <strong id="emailLabel">EMAIL:</strong>
+                </div>
                 <div class="col-md-8 email--fix">
                   23050102@student.bdu.edu.vn
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-4"><strong>SĐT:</strong></div>
+                <div class="col-md-4">
+                  <strong id="phoneLabel">SĐT:</strong>
+                </div>
                 <div class="col-md-8">0384441045</div>
               </div>
               <div class="row">
-                <div class="col-md-4"><strong>ĐỊA CHỈ:</strong></div>
-                <div class="col-md-8">Hiệp Thành, Thủ Dầu 1, Bình Dương</div>
+                <div class="col-md-4">
+                  <strong id="addressLabel">ĐỊA CHỈ:</strong>
+                </div>
+                <div class="col-md-8" id="addressValue">
+                  Hiệp Thành, Thủ Dầu 1, Bình Dương
+                </div>
               </div>
               <div class="row">
-                <div class="col-md-4"><strong>NGÔN NGỮ:</strong></div>
-                <div class="col-md-8">Tiếng Việt</div>
+                <div class="col-md-4">
+                  <strong id="languageLabelInfo">NGÔN NGỮ:</strong>
+                </div>
+                <div class="col-md-8" id="languageValue">Tiếng Việt</div>
               </div>
             </div>
           </div>
@@ -243,50 +262,70 @@
       <div class="container muctieu">
         <div class="row justify-content-center">
           <div class="col-8 bd-mt">
-            <h1 class="heading-mt" id="Target">MỤC TIÊU NGHỀ NGHIỆP</h1>
-            <div class="content-mt d-flex align-items-center gap-2">
+            <h1 class="heading-mt" id="mtnn">MỤC TIÊU NGHỀ NGHIỆP</h1>
+            <div
+              class="content-mt d-flex align-items-center gap-2"
+              data-aos="fade-right"
+            >
               <div class="img-mt">
                 <img class="img" src="./assets/imgs/mt.jpg" alt="" />
               </div>
               <div class="content-mt__mt">
-                <h2 class="heading-2">Trở thành Lập trình viên Cao cấp</h2>
-                <p class="desc-mt">
+                <h2 class="heading-2" id="target1Title">
+                  Trở thành Lập trình viên Cao cấp
+                </h2>
+                <p class="desc-mt" id="target1Desc">
                   Phấn đấu nâng cao kỹ năng phát triển full-stack và đảm nhận
                   vai trò dẫn dắt dự án trong vòng 3 năm tới.
                 </p>
               </div>
             </div>
-            <div class="content-mt d-flex align-items-center gap-2">
+            <div
+              class="content-mt d-flex align-items-center gap-2"
+              data-aos="fade-left"
+            >
               <div class="img-mt">
                 <img class="img" src="./assets/imgs/bok.jpg" alt="" />
               </div>
               <div class="content-mt__mt">
-                <h2 class="heading-2">Thành thạo các Framework Nâng cao</h2>
-                <p class="desc-mt">
+                <h2 class="heading-2" id="target2Title">
+                  Thành thạo các Framework Nâng cao
+                </h2>
+                <p class="desc-mt" id="target2Desc">
                   Học và áp dụng các framework nâng cao như React và Node.js để
                   xây dựng ứng dụng hiệu quả.
                 </p>
               </div>
             </div>
-            <div class="content-mt d-flex align-items-center gap-2">
+            <div
+              class="content-mt d-flex align-items-center gap-2"
+              data-aos="fade-right"
+            >
               <div class="img-mt">
                 <img class="img" src="./assets/imgs/bt.jpg" alt="" />
               </div>
               <div class="content-mt__mt">
-                <h2 class="heading-2">Đóng góp cho Mã nguồn Mở</h2>
-                <p class="desc-mt">
+                <h2 class="heading-2" id="target3Title">
+                  Đóng góp cho Mã nguồn Mở
+                </h2>
+                <p class="desc-mt" id="target3Desc">
                   Tham gia đóng góp vào các dự án mã nguồn mở để nâng cao kỹ
                   năng hợp tác và lập trình.
                 </p>
               </div>
             </div>
-            <div class="content-mt d-flex align-items-center gap-2">
+            <div
+              class="content-mt d-flex align-items-center gap-2"
+              data-aos="fade-left"
+            >
               <div class="img-mt">
                 <img class="img" src="./assets/imgs/bd.jpg" alt="" />
               </div>
               <div class="content-mt__mt">
-                <h2 class="heading-2">Đổi mới trong Thiết kế UI/UX</h2>
-                <p class="desc-mt">
+                <h2 class="heading-2" id="target4Title">
+                  Đổi mới trong Thiết kế UI/UX
+                </h2>
+                <p class="desc-mt" id="target4Desc">
                   Tập trung cải thiện kỹ năng Photoshop để tạo ra các giao diện
                   thân thiện với người dùng.
                 </p>
@@ -298,98 +337,102 @@
 
       <div class="container hocvan">
         <div class="ct-nd">
-          <h1 class="heading-hv" id="Education">Học Vấn</h1>
-          <div class="top-hv d-flex align-items-center gap-5">
+          <h1 class="heading-hv" id="hv">Học Vấn</h1>
+          <div
+            class="top-hv d-flex align-items-center gap-5"
+            data-aos="zoom-out-down"
+          >
             <div class="bg-img-hv">
               <img src="./assets/imgs/graduate.jpg" alt="" class="img-hv" />
             </div>
             <div class="content-hv">
-              <h2 class="heading-2-hv">Đại học Bình Dương</h2>
-              <p class="desc-hv">Ngành: Công nghệ Thông tin</p>
-              <p class="desc-hv__nho">
+              <h2 class="heading-2-hv" id="edu1Title">Đại học Bình Dương</h2>
+              <p class="desc-hv" id="edu1Major">Ngành: Công nghệ Thông tin</p>
+              <p class="desc-hv__nho" id="edu1Time">
                 <em>2025 - Hiện tại (Sinh viên năm 2)</em>
               </p>
             </div>
           </div>
-          <div class="top-hv d-flex align-items-center gap-5">
+          <div
+            class="top-hv d-flex align-items-center gap-5"
+            data-aos="zoom-out-down"
+          >
             <div class="bg-img-hv">
               <img src="./assets/imgs/school.png" alt="" class="img-hv-nho" />
             </div>
             <div class="content-hv">
-              <h2 class="heading-2-hv">Trường THPT [ THCS-THPT ĐĂNG HÀ ]</h2>
-              <p class="desc-hv">Học sinh tốt nghiệp THPT</p>
-              <p class="desc-hv__nho"><em>2020 - 2023</em></p>
+              <h2 class="heading-2-hv" id="edu2Title">
+                Trường THPT [THCS-THPT ĐĂNG HÀ]
+              </h2>
+              <p class="desc-hv" id="edu2Major">Học sinh tốt nghiệp THPT</p>
+              <p class="desc-hv__nho" id="edu2Time"><em>2020 - 2023</em></p>
             </div>
           </div>
         </div>
       </div>
 
       <div class="container kinang">
-        <h1 class="heading-kn" id="Skill">KĨ NĂNG</h1>
+        <h1 class="heading-kn" id="kn">KĨ NĂNG</h1>
         <div class="box-kinang row g-4">
           <div class="col-md-6">
-            <!-- html -->
             <div class="tile-sk d-flex justify-content-between">
-              <p class="desc-kn">HTML</p>
+              <p class="desc-kn" id="skill1">HTML</p>
               <span>75%</span>
             </div>
             <div class="thanhsk">
-              <div class="tl-html"></div>
+              <div class="tl-html" data-aos="fade-right"></div>
             </div>
-            <!-- css -->
             <div class="tile-sk d-flex justify-content-between">
-              <p class="desc-kn">CSS</p>
+              <p class="desc-kn" id="skill2">CSS</p>
               <span>75%</span>
             </div>
             <div class="thanhsk">
-              <div class="tl-html"></div>
+              <div class="tl-html" data-aos="fade-right"></div>
             </div>
-            <!-- js -->
             <div class="tile-sk d-flex justify-content-between">
-              <p class="desc-kn">JavaScript</p>
+              <p class="desc-kn" id="skill3">JavaScript</p>
               <span>50%</span>
             </div>
             <div class="thanhsk">
-              <div class="tl-js"></div>
+              <div class="tl-js" data-aos="fade-right"></div>
             </div>
-            <!-- bootstrap-->
             <div class="tile-sk d-flex justify-content-between">
-              <p class="desc-kn">BootStrap</p>
+              <p class="desc-kn" id="skill4">BootStrap</p>
               <span>50%</span>
             </div>
             <div class="thanhsk">
-              <div class="tl-bt"></div>
+              <div class="tl-bt" data-aos="fade-right"></div>
             </div>
           </div>
           <div class="col-md-6">
             <div class="tile-sk d-flex justify-content-between">
-              <p class="desc-kn">PyThon</p>
+              <p class="desc-kn" id="skill5">PyThon</p>
               <span>70%</span>
             </div>
             <div class="thanhsk">
-              <div class="tl-py"></div>
+              <div class="tl-py" data-aos="fade-right"></div>
             </div>
             <div class="tile-sk d-flex justify-content-between">
-              <p class="desc-kn">C#</p>
+              <p class="desc-kn" id="skill6">C#</p>
               <span>70%</span>
             </div>
             <div class="thanhsk">
-              <div class="tl-c"></div>
+              <div class="tl-c" data-aos="fade-right"></div>
             </div>
             <div class="tile-sk d-flex justify-content-between">
-              <p class="desc-kn">SQL Sever</p>
+              <p class="desc-kn" id="skill7">SQL Sever</p>
               <span>75%</span>
             </div>
             <div class="thanhsk">
-              <div class="tl-sql"></div>
+              <div class="tl-sql" data-aos="fade-right"></div>
             </div>
           </div>
         </div>
       </div>
 
       <div class="container sothich">
-        <h1 class="heading-st" id="Interests">SỞ THÍCH</h1>
-        <div class="swiper mySwiper">
+        <h1 class="heading-st" id="st">SỞ THÍCH</h1>
+        <div class="swiper mySwiper" data-aos="zoom-in-down">
           <div class="swiper-wrapper">
             <div class="swiper-slide d-flex justify-content-center">
               <div class="card w-100">
@@ -400,76 +443,72 @@
                   alt="ảnh đá bóng"
                 />
                 <div class="card-body text-center">
-                  <h1 class="card-title">Đá Bóng</h1>
-                  <p class="card-text">
+                  <h1 class="card-title" id="interest1Title">Đá Bóng</h1>
+                  <p class="card-text" id="interest1Desc">
                     Thích chơi bóng với bạn bè vào cuối tuần để thư giãn.
                   </p>
                 </div>
               </div>
             </div>
-
             <div class="swiper-slide d-flex justify-content-center">
               <div class="card w-100">
                 <img
                   class="thumb-st"
                   src="./assets/imgs/docsach.webp"
                   class="card-img-top"
-                  alt="ảnh đá bóng"
+                  alt="ảnh đọc sách"
                 />
                 <div class="card-body text-center">
-                  <h1 class="card-title">Đọc Sách</h1>
-                  <p class="card-text">
+                  <h1 class="card-title" id="interest2Title">Đọc Sách</h1>
+                  <p class="card-text" id="interest2Desc">
                     Thích sách self-help như "Đắc Nhân Tâm".
                   </p>
                 </div>
               </div>
             </div>
-
             <div class="swiper-slide d-flex justify-content-center">
-              <div class="card w100">
+              <div class="card w-100">
                 <img
                   class="thumb-st"
                   src="./assets/imgs/nghenhac.jpg"
                   class="card-img-top"
-                  alt="ảnh đá bóng"
+                  alt="ảnh nghe nhạc"
                 />
                 <div class="card-body text-center">
-                  <h1 class="card-title">Nghe Nhạc</h1>
-                  <p class="card-text">
+                  <h1 class="card-title" id="interest3Title">Nghe Nhạc</h1>
+                  <p class="card-text" id="interest3Desc">
                     Yêu thích nhạc pop và rap, fan của Sơn Tùng M-TP.
                   </p>
                 </div>
               </div>
             </div>
-
             <div class="swiper-slide d-flex justify-content-center">
-              <div class="card w100">
+              <div class="card w-100">
                 <img
                   class="thumb-st"
                   src="./assets/imgs/caulong.jpg"
                   class="card-img-top"
-                  alt="ảnh đá bóng"
+                  alt="ảnh cầu lông"
                 />
                 <div class="card-body text-center">
-                  <h1 class="card-title">Cầu Lông</h1>
-                  <p class="card-text">
+                  <h1 class="card-title" id="interest4Title">Cầu Lông</h1>
+                  <p class="card-text" id="interest4Desc">
                     Chơi cầu lông để rèn sức khỏe, thích đánh đôi.
                   </p>
                 </div>
               </div>
             </div>
-
             <div class="swiper-slide d-flex justify-content-center">
-              <div class="card w100">
+              <div class="card w-100">
                 <img
                   class="thumb-st"
                   src="./assets/imgs/chay.jpg"
                   class="card-img-top"
-                  alt="ảnh đá bóng"
+                  alt="ảnh chạy bộ"
                 />
                 <div class="card-body text-center">
-                  <h1 class="card-title">Chạy Bộ</h1>
-                  <p class="card-text">
+                  <h1 class="card-title" id="interest5Title">Chạy Bộ</h1>
+                  <p class="card-text" id="interest5Desc">
                     Chạy bộ buổi sáng để giữ dáng và thư giãn đầu óc.
                   </p>
                 </div>
@@ -481,63 +520,71 @@
       </div>
 
       <div class="container lienhe">
-        <div class="box-lh row">
+        <div class="box-lh row" data-aos="zoom-in-down">
           <div class="col-md-5 bg-lh">
-            <h1 class="heading-lh" id="Contact">LIÊN HỆ VỚI TÔI</h1>
-            <p class="desc-lhh"><strong>Địa Chỉ:</strong></p>
-            <p class="desc-lhh">Hiệp thành, Thủ Dầu 1, Bình Dương</p>
-            <p class="desc-lhh"><strong>Điện Thoại:</strong></p>
-            <p class="desc-lhh">+84 384 441 045</p>
-            <p class="desc-lhh" :><strong>Email:</strong></p>
-            <p class="desc-lhh email--fix">23050102@student.bdu.edu.vn</p>
+            <h1 class="heading-lh" id="lh">LIÊN HỆ VỚI TÔI</h1>
+            <p class="desc-lhh">
+              <strong id="contactAddressLabel">Địa Chỉ:</strong>
+            </p>
+            <p class="desc-lhh" id="contactAddressValue">
+              Hiệp thành, Thủ Dầu 1, Bình Dương
+            </p>
+            <p class="desc-lhh">
+              <strong id="contactPhoneLabel">Điện Thoại:</strong>
+            </p>
+            <p class="desc-lhh" id="contactPhoneValue">+84 384 441 045</p>
+            <p class="desc-lhh">
+              <strong id="contactEmailLabel">Email:</strong>
+            </p>
+            <p class="desc-lhh email--fix" id="contactEmailValue">
+              23050102@student.bdu.edu.vn
+            </p>
           </div>
-
           <div class="col-md-7 bg-right-lh">
-            <h1 class="heading-lh-left">GỬI TIN NHẮN</h1>
+            <h1 class="heading-lh-left" id="contactFormTitle">GỬI TIN NHẮN</h1>
             <form>
               <div class="form-group">
-                <label for="name">Họ và tên</label>
+                <label for="name" id="formNameLabel">Họ và tên</label>
                 <input
                   type="text"
-                  id="name"
+                  id="nameInput"
                   name="name"
                   placeholder="Nhập họ và tên"
                   required
                 />
               </div>
-
               <div class="form-group">
-                <label for="email">Email</label>
+                <label for="email" id="formEmailLabel">Email</label>
                 <input
                   type="email"
-                  id="email"
+                  id="emailInput"
                   name="email"
                   placeholder="Nhập email"
                   required
                 />
               </div>
-
               <div class="form-group">
-                <label for="cd">Chủ đề</label>
+                <label for="cd" id="formSubjectLabel">Chủ đề</label>
                 <input
                   type="text"
-                  id="cd"
+                  id="subjectInput"
                   name="cd"
-                  placeholder="Nhập chủ để"
+                  placeholder="Nhập chủ đề"
                 />
               </div>
-
               <div class="form-group">
-                <label for="message">Tin nhắn</label>
+                <label for="message" id="formMessageLabel">Tin nhắn</label>
                 <textarea
-                  id="message"
+                  id="messageInput"
                   name="message"
                   placeholder="Nhập tin nhắn của bạn"
                   required
                   rows="3"
                 ></textarea>
               </div>
-              <button type="submit" class="submit-btn">Gửi</button>
+              <button type="submit" class="submit-btn" id="formSubmit">
+                Gửi
+              </button>
             </form>
           </div>
         </div>
@@ -549,7 +596,7 @@
       <div class="content-ft p-5">
         <div class="top-ft text-center">
           <h1 class="heading-ft">Lý Lâm Vũ</h1>
-          <p class="desc-ft">Lập Trình Viên Chuyên Nghiệp</p>
+          <p class="desc-ft" id="lt">Lập Trình Viên Chuyên Nghiệp</p>
         </div>
         <div class="icon-ft d-flex justify-content-center align-items-center">
           <div title="" class="bg-icon-ft">
@@ -629,13 +676,21 @@
       </div>
     </div>
 
+    <!-- bootstrap js -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
 
+    <!-- swiper jss -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./assets/js/script.js"></script>
+
+    <!-- AOS js -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

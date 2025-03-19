@@ -365,6 +365,7 @@ button {
 }
 
 .swiper {
+  padding: 30px;
   max-width: 878px;
   margin: 0 auto;
   border-radius: 30px;

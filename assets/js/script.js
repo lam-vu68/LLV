@@ -366,7 +366,6 @@ document.getElementById("lang-vi").addEventListener("click", function (e) {
   changeLanguage("vi");
 });
 
-// Đặt ngôn ngữ mặc định là tiếng Việt khi tải trang
 changeLanguage("vi");
 
 var swiper = new Swiper(".mySwiper", {
@@ -410,4 +409,18 @@ var swiper = new Swiper(".mySwiper", {
       },
     },
   },
+});
+
+// =======================ĐỔI MÀU THANH CUỘN=====================
+window.addEventListener("scroll", function () {
+  const navbar = document.querySelector(".navbar");
+  const scrollPosition = window.scrollY;
+
+  if (scrollPosition >= 500) {
+    navbar.classList.remove("bg-color");
+    navbar.classList.add("bg-colored");
+  } else {
+    navbar.classList.remove("bg-colored");
+    navbar.classList.add("bg-color");
+  }
 });

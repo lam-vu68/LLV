@@ -2,8 +2,9 @@
   height: 583px;
   background-image: url(./img/colin-watts-Vp6FWs5OGBQ-unsplash.jpg);
   background-size: cover;
-  background-position: end;
+  background-position: bottom;
   position: relative;
+  background-attachment: fixed;
 }
 a {
   text-decoration: none;
@@ -32,7 +33,12 @@ button {
 }
 /* ====================================header====================================== */
 .bg-color {
-  background-color: #efefeff5;
+  background-color: #efefef30;
+  transition: background-color 0.8s ease;
+}
+.bg-colored {
+  background-color: #b7e4f5;
+  transition: background-color 0.8s ease;
 }
 .nav-item {
   transition-duration: 0.8s;
@@ -148,7 +154,7 @@ button {
 }
 /* ============================main============================ */
 .main-about {
-  margin-top: 100px;
+  margin-top: 160px;
   font-family: "Roboto", sans-serif;
 }
 
@@ -194,7 +200,7 @@ button {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 .muctieu {
-  margin-top: 400px;
+  margin-top: 160px;
 }
 
 .heading-mt {

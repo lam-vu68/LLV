@@ -390,7 +390,7 @@ var swiper = new Swiper(".mySwiper", {
     // Mobile nhỏ (320px trở lên)
     320: {
       slidesPerView: 1, // Chỉ hiển thị 1 slide
-      spaceBetween: -10, // Khoảng cách giữa các slide
+      spaceBetween: -100, // Khoảng cách giữa các slide
       centeredSlides: true, // Căn giữa slide
     },
     // Tablet (768px trở lên)

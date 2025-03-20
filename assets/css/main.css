@@ -163,12 +163,12 @@ button {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 .ttcb {
-  position: absolute;
+  position: relative;
   background-color: #fffcf4;
   padding: 35px 15px;
   border-radius: 40px;
-  bottom: -235px;
-  left: 295px;
+  bottom: 39px;
+  left: 70px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 .main-heading {
